@@ -8,41 +8,43 @@ module.exports = (sequelize, Sequelize) => {
       },
       email: {
         type: Sequelize.STRING
-      },
-      telefone : {
-        type: sequelize.STRING
+      }, 
+      telefone: {
+        type: Sequelize.STRING
       },
       usuario: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
       },
       senha: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
       },
       confirma_senha: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
       },
       rua: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
       },
       numero: {
-        type: sequelize.INTEGER
+        type: Sequelize.INTEGER
       },
       complemento: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
       },
       cep: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
       },
       bairro: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
       },
       cidade: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
       },
       estado: {
-        type: sequelize.STRING
+        type: Sequelize.STRING
       }
     });
   
     return Cliente;
+
+   
   };

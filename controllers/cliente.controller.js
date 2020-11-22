@@ -26,7 +26,7 @@ exports.create = (req, res) => {
       cep: req.body.cep,
       bairro: req.body.bairro,
       cidade: req.body.cidade,
-      estado: req.body.estado 
+      estado: req.body.estado
     };
   
     // Salvando o cliente no banco

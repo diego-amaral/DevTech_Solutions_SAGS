@@ -5,4 +5,6 @@ module.exports = app => {
   
     // Criando um novo cliente
     router.post("/", clientes.create);
+    app.use('/',router);
+
 }
