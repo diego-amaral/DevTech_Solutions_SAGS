@@ -57,3 +57,17 @@ exports.create = (req, res) => {
         });
       });
   };
+
+  exports.findOne = (req, res) => {
+    const id = req.params.id;
+  
+    Cliente.findByPk(id)
+      .then(data => {
+        res.send(data);
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: "Erro ao recuperar o Cliente com id=" + id
+        });
+      });
+  };

@@ -5,10 +5,14 @@ module.exports = app => {
   
     // Criando um novo cliente
     router.post("/", clientes.create);
-    app.use('/',router);
+    
 
     // Buscando todos os clientes
     router.get("/", clientes.findAll);
+
+    //Recuperando um único cliente com o id
+    router.get("/:id", clientes.findOne);
+
     app.use('/',router);
 
 };
