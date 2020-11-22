@@ -13,6 +13,13 @@ module.exports = app => {
     //Recuperando um único cliente com o id
     router.get("/:id", clientes.findOne);
 
-    app.use('/',router);
+    // Atualizando o cliente pelo id
+    router.put("/:id", clientes.update);
+
+    // Deletando o cliente pelo id
+    router.delete("/:id", clientes.delete);
+
+
+    app.use('/api/clientes',router);
 
 };

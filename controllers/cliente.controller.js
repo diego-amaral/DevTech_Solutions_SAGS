@@ -42,6 +42,7 @@ exports.create = (req, res) => {
       });
   };
 
+  // Mostrando todos os clientes cadastrados
   exports.findAll = (req, res) => {
     const nome = req.query.nome;
     var condition = nome ? { nome: { [Op.like]: `%${nome}%` } } : null;
@@ -58,6 +59,7 @@ exports.create = (req, res) => {
       });
   };
 
+  // Mostrando cliente pelo id
   exports.findOne = (req, res) => {
     const id = req.params.id;
   
@@ -68,6 +70,56 @@ exports.create = (req, res) => {
       .catch(err => {
         res.status(500).send({
           message: "Erro ao recuperar o Cliente com id=" + id
+        });
+      });
+  };
+
+  // Atualizando o cliente identificado pelo id
+  exports.update = (req, res) => {
+    const id = req.params.id;
+  
+    Cliente.update(req.body, {
+      where: { id: id }
+    })
+      .then(num => {
+        if (num == 1) {
+          res.send({
+            message: "Cliente atualizado com sucesso."
+          });
+        } else {
+          res.send({
+            message: `Não é possível atualizar o cliente com o id=${id}. Talves o cliente não tenha sido encontrado ou a requisição no corpo do documento está vazia!`
+          });
+        }
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: "Erro ao atualizar o cliente id=" + id
+        });
+      });
+  };
+
+  // Deletando o cliente pelo id
+  exports.delete = (req, res) => {
+    const id = req.params.id;
+  
+    Cliente.destroy({
+      where: { id: id }
+    })
+      .then(num => {
+        if (num == 1) {
+          res.send({
+            message: "Cliente doi deletado com sucesso!"
+          });
+        } else {
+          res.send({
+            message: `Não foi possível deletar o cliente com o id=${id}. Talves o Cliente não tenha sido encontrado!`
+          });
+        }
+      })
+      .catch(err => {
+        res.status(500).send({
+          message: "Não foi possível deletar o Cliente com id=" + id
         });
       });
   };
