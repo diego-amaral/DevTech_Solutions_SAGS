@@ -123,3 +123,20 @@ exports.create = (req, res) => {
         });
       });
   };
+
+  // Deletando todos os registros da base
+  exports.deleteAll = (req, res) => {
+    Cliente.destroy({
+      where: {},
+      truncate: false
+    })
+      .then(nums => {
+        res.send({ message: `${nums} Todos os clientes deletados com sucesso!` });
+      })
+      .catch(err => {
+        res.status(500).send({
+          message:
+            err.message || "Ocorreu algum erro ao tentar deletar todos os clientes."
+        });
+      });
+  };
