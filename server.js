@@ -16,17 +16,18 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
+//dropa toda vez que inicializa para modo de desenvolvimento
 const db = require("./models");
 db.sequelize.sync({ force: true }).then(() => {
     console.log("Drop and re-sync db.");
   });
 
 // simple route
-app.get("/", (req, res) => {
+/*app.get("/", (req, res) => {
   res.json({ message: "Bem-vindo ao bezkoder application." });
-});
+});*/
 
-//rota criação de um cliente
+//rota crud clientes
 require("./routes/cliente.routes")(app);
 
 // set port, listen for requests

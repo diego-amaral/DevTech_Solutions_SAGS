@@ -41,3 +41,19 @@ exports.create = (req, res) => {
         });
       });
   };
+
+  exports.findAll = (req, res) => {
+    const nome = req.query.nome;
+    var condition = nome ? { nome: { [Op.like]: `%${nome}%` } } : null;
+  
+    Cliente.findAll({ where: condition })
+      .then(data => {
+        res.send(data);
+      })
+      .catch(err => {
+        res.status(500).send({
+          message:
+            err.message || "Ocorreu algum erro ao tentar recuperar o nome dos clientes."
+        });
+      });
+  };
