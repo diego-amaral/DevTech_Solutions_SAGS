@@ -16,11 +16,14 @@ app.use(bodyParser.json());
 // parse requests of content-type - application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
 
-//dropa toda vez que inicializa para modo de desenvolvimento
+
 const db = require("./models");
+//db.sequelize.sync();
+
+//dropa a tabela toda vez que inicializa para modo de desenvolvimento
 db.sequelize.sync({ force: true }).then(() => {
-    console.log("Drop and re-sync db.");
-  });
+  console.log("Drop and re-sync db.");
+});
 
 // simple route
 /*app.get("/", (req, res) => {
@@ -29,6 +32,9 @@ db.sequelize.sync({ force: true }).then(() => {
 
 //rota crud clientes
 require("./routes/cliente.routes")(app);
+
+//rota crud empresas
+require("./routes/empresa.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;

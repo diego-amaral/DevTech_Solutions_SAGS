@@ -1,11 +1,11 @@
 module.exports = app => {
     const clientes = require("../controllers/cliente.controller");
-  
+
     var router = require("express").Router();
-  
+
     // Criando um novo cliente
     router.post("/", clientes.create);
-    
+
 
     // Buscando todos os clientes
     router.get("/", clientes.findAll);
@@ -23,6 +23,6 @@ module.exports = app => {
     router.delete("/", clientes.deleteAll);
 
 
-    app.use('/api/clientes',router);
+    app.use('/api/clientes', router);
 
 };

@@ -19,6 +19,11 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.clientes = require("./cliente.model.js")(sequelize, Sequelize);
+//referenciando a classe cliente 
+db.clientes = require("./cliente.model")(sequelize, Sequelize);
+
+//referenciando a classe empresa
+db.empresas = require("./empresa.model")(sequelize, Sequelize);
+
 
 module.exports = db;
