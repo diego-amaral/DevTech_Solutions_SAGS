@@ -1,7 +1,7 @@
 # DevTech_Solutions_SAGS
 **_Api em fase de desenvolvida para o SAGS (Sistema de Apoio e Gerenciamento para Studio)_**
 ==========================================================================================
-## Equipe:
+## Equipe:{
 1. Allan Da Silva Gonçalves;
 
 2. Ana Quezia Lira Lima; 
@@ -13,3 +13,4 @@
 5. Marlon Brando de Sales Siqueira; 
 
 6. Patricia Luckwu de Santana; 
+};
