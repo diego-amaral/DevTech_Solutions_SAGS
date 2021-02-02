@@ -69,7 +69,7 @@ exports.findOne = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: "Erro ao recuperar o Cliente com id=" + id
+        message: `Erro ao recuperar o Cliente com id=${id}.`
       });
     });
 };
@@ -84,7 +84,7 @@ exports.update = (req, res) => {
     .then(num => {
       if (num == 1) {
         res.send({
-          message: `Cliente com o Id=${id}, atualizado com sucesso!`
+          message: `Cliente com o Id=${id},  atualizado com sucesso!`
         });
       } else {
         res.send({
@@ -94,7 +94,7 @@ exports.update = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: "Erro ao atualizar o cliente id=" + id
+        message: `Erro ao atualizar o cliente id=${id}`
       });
     });
 };
@@ -109,7 +109,7 @@ exports.delete = (req, res) => {
     .then(num => {
       if (num == 1) {
         res.send({
-          message: `Cliente com o Id={id}, foi deletado com sucesso!`
+          message: `Cliente com o Id=${id}, foi deletado com sucesso!`
         });
       } else {
         res.send({
@@ -119,7 +119,7 @@ exports.delete = (req, res) => {
     })
     .catch(err => {
       res.status(500).send({
-        message: "Não foi possível deletar o Cliente com id=" + id
+        message: `Não foi possível deletar o Cliente com id=${id}.`
       });
     });
 };
