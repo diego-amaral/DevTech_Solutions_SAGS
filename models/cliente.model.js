@@ -1,45 +1,45 @@
 module.exports = (sequelize, Sequelize) => {
   const Cliente = sequelize.define("cliente", {
-    nome: {
+    NomeUsuario: {
       type: Sequelize.STRING
     },
-    cpf: {
+    CPFUsuario: {
       type: Sequelize.STRING
     },
-    email: {
+    EmailUsuario: {
       type: Sequelize.STRING
     },
-    telefone: {
+    Confirmar_email_Usuario: {
       type: Sequelize.STRING
     },
-    usuario: {
+    TelefoneUsuario: {
       type: Sequelize.STRING
     },
-    senha: {
+    senhaUsuario: {
       type: Sequelize.STRING
     },
-    confirma_senha: {
+    Confirmar_senha_Usuario: {
       type: Sequelize.STRING
     },
-    rua: {
+    EndereçoUsuario: {
       type: Sequelize.STRING
     },
-    numero: {
+    NumeroUsuario: {
       type: Sequelize.INTEGER
     },
-    complemento: {
+    ComplementoUsuario: {
       type: Sequelize.STRING
     },
-    cep: {
+    CEPUsuario: {
       type: Sequelize.STRING
     },
-    bairro: {
+    BairroUsuario: {
       type: Sequelize.STRING
     },
-    cidade: {
+    CidadeUsuario: {
       type: Sequelize.STRING
     },
-    estado: {
+    UFUsuario: {
       type: Sequelize.STRING
     }
   });
