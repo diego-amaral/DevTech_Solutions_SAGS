@@ -13,8 +13,9 @@ exports.create = (req, res) => {
 
   // Criando o Cliente
   const cliente = {
+    Tipo: req.body.Tipo,
     NomeUsuario: req.body.NomeUsuario,
-    CPF: req.body.CPFUsuario,
+    CPFUsuario: req.body.CPFUsuario,
     EmailUsuario: req.body.EmailUsuario,
     TelefoneUsuario: req.body.TelefoneUsuario,
     senhaUsuario: req.body.senhaUsuario,

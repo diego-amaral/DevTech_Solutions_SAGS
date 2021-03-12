@@ -1,47 +1,50 @@
 module.exports = (sequelize, Sequelize) => {
     const Empresa = sequelize.define("empresa", {
-        nome: {
-            type: Sequelize.STRING
-        },
-        cnpj: {
-            type: Sequelize.STRING
-        },
-        email: {
-            type: Sequelize.STRING
-        },
-        telefone: {
-            type: Sequelize.STRING
-        },
-        usuario: {
-            type: Sequelize.STRING
-        },
-        senha: {
-            type: Sequelize.STRING
-        },
-        confirma_senha: {
-            type: Sequelize.STRING
-        },
-        rua: {
-            type: Sequelize.STRING
-        },
-        numero: {
+            Tipo: {
             type: Sequelize.INTEGER
-        },
-        complemento: {
+            },
+            NomeEmpresa: {
             type: Sequelize.STRING
-        },
-        cep: {
-            type: Sequelize.STRING
-        },
-        bairro: {
-            type: Sequelize.STRING
-        },
-        cidade: {
-            type: Sequelize.STRING
-        },
-        estado: {
-            type: Sequelize.STRING
-        }
+            },
+            CNPJEmpresa: {
+                type: Sequelize.STRING
+            },
+            EmailEmpresa: {
+                type: Sequelize.STRING
+            },
+            Confirmar_email_Empresa: {
+                type: Sequelize.STRING
+            },
+            TelefoneEmpresa: {
+                type: Sequelize.STRING
+            },
+            senhaEmpresa: {
+                type: Sequelize.STRING
+            },
+            Confirmar_senha_Empresa: {
+                type: Sequelize.STRING
+            },
+            EndereçoEmpresa: {
+                type: Sequelize.STRING
+            },
+            NumeroEmpresa: {
+                type: Sequelize.INTEGER
+            },
+            ComplementoEmpresa: {
+                type: Sequelize.STRING
+            },
+            CEPEmpresa: {
+                type: Sequelize.STRING
+            },
+            BairroEmpresa: {
+                type: Sequelize.STRING
+            },
+            CidadeEmpresa: {
+                type: Sequelize.STRING
+            },
+            UFEmpresa: {
+                type: Sequelize.STRING
+            }
     });
 
     return Empresa;
