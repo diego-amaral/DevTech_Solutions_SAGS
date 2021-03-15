@@ -3,46 +3,46 @@ module.exports = (sequelize, Sequelize) => {
     Tipo: {
       type: Sequelize.INTEGER
     },
-    NomeUsuario: {
+    Nome: {
       type: Sequelize.STRING
     },
-    CPFUsuario: {
+    CPF: {
       type: Sequelize.STRING
     },
-    EmailUsuario: {
+    Email: {
       type: Sequelize.STRING
     },
-    Confirmar_email_Usuario: {
+    Confirmar_Email: {
       type: Sequelize.STRING
     },
-    TelefoneUsuario: {
+    Telefone: {
       type: Sequelize.STRING
     },
-    senhaUsuario: {
+    Senha: {
       type: Sequelize.STRING
     },
-    Confirmar_senha_Usuario: {
+    Confirmar_Senha: {
       type: Sequelize.STRING
     },
-    EndereçoUsuario: {
+    Endereço: {
       type: Sequelize.STRING
     },
-    NumeroUsuario: {
+    Numero: {
       type: Sequelize.INTEGER
     },
-    ComplementoUsuario: {
+    Complemento: {
       type: Sequelize.STRING
     },
-    CEPUsuario: {
+    CEP: {
       type: Sequelize.STRING
     },
-    BairroUsuario: {
+    Bairro: {
       type: Sequelize.STRING
     },
-    CidadeUsuario: {
+    Cidade: {
       type: Sequelize.STRING
     },
-    UFUsuario: {
+    UF: {
       type: Sequelize.STRING
     }
   });

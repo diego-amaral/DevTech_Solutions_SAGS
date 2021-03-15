@@ -14,19 +14,20 @@ exports.create = (req, res) => {
   // Criando o Cliente
   const cliente = {
     Tipo: req.body.Tipo,
-    NomeUsuario: req.body.NomeUsuario,
-    CPFUsuario: req.body.CPFUsuario,
-    EmailUsuario: req.body.EmailUsuario,
-    TelefoneUsuario: req.body.TelefoneUsuario,
-    senhaUsuario: req.body.senhaUsuario,
-    Confirmar_senha_Usuario: req.body.Confirmar_senha_Usuario,
-    EndereçoUsuario: req.body.EndereçoUsuario,
-    NumeroUsuario: req.body.NumeroUsuario,
-    ComplementoUsuario: req.body.ComplementoUsuario,
-    CEPUsuario: req.body.CEPUsuario,
-    BairroUsuario: req.body.BairroUsuario,
-    CidadeUsuario: req.body.CidadeUsuario,
-    UFUsuario: req.body.UFUsuario
+    Nome: req.body.Nome,
+    CPF: req.body.CPF,
+    Email: req.body.Email,
+    Confirmar_Email: req.body.Confirmar_Email,
+    Telefone: req.body.Telefone,
+    senha: req.body.Senha,
+    Confirmar_Senha: req.body.Confirmar_Senha,
+    Endereço: req.body.Endereço,
+    Numero: req.body.Numero,
+    Complemento: req.body.Complemento,
+    CEP: req.body.CEP,
+    Bairro: req.body.Bairro,
+    Cidade: req.body.Cidade,
+    UF: req.body.UF
   };
 
   // Salvando o cliente no banco

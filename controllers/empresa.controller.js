@@ -14,19 +14,20 @@ exports.create = (req, res) => {
     // Criando a Empresa
     const empresa = {
     Tipo: req.body.Tipo,
-    NomeEmpresa: req.body.NomeEmpresa,
-    CPFEmpresa: req.body.CPFEmpresa,
-    EmailEmpresa: req.body.EmailEmpresa,
-    TelefoneEmpresa: req.body.TelefoneEmpresa,
-    senhaEmpresa: req.body.senhaEmpresa,
-    Confirmar_senha_Empresa: req.body.Confirmar_senha_Empresa,
-    EndereçoEmpresa: req.body.EndereçoEmpresa,
-    NumeroEmpresa: req.body.NumeroEmpresa,
-    ComplementoEmpresa: req.body.ComplementoEmpresa,
-    CEPEmpresa: req.body.CEPEmpresa,
-    BairroEmpresa: req.body.BairroEmpresa,
-    CidadeEmpresa: req.body.CidadeEmpresa,
-    UFEmpresa: req.body.UFEmpresa
+    Nome: req.body.Nome,
+    CNPJ: req.body.CNPJ,
+    Email: req.body.Email,
+    Confirmar_Email: req.body.Confirmar_Email,
+    Telefone: req.body.Telefone,
+    Senha: req.body.Senha,
+    Confirmar_senha: req.body.Confirmar_Senha,
+    Endereço: req.body.Endereço,
+    NumeroEmpresa: req.body.Numero,
+    ComplementoEmpresa: req.body.Complemento,
+    CEP: req.body.CEP,
+    Bairro: req.body.Bairro,
+    CidadeEmpresa: req.body.Cidade,
+    UF: req.body.UF
     };
 
     // Salvando a empresa no banco

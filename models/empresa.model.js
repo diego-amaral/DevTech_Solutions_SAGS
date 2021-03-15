@@ -1,48 +1,48 @@
 module.exports = (sequelize, Sequelize) => {
-  const Empresa = sequelize.define("empresa", {
+const Empresa = sequelize.define("empresa", {
     Tipo: {
         type: Sequelize.INTEGER
     },
-    NomeEmpresa: {
+    Nome: {
         type: Sequelize.STRING
     },
-    CNPJEmpresa: {
+    CNPJ: {
         type: Sequelize.STRING
     },
-    EmailEmpresa: {
+    Email: {
         type: Sequelize.STRING
     },
-    Confirmar_email_Empresa: {
+    Confirmar_Email: {
         type: Sequelize.STRING
     },
-    TelefoneEmpresa: {
+    Telefone: {
         type: Sequelize.STRING
     },
-    senhaEmpresa: {
+    Senha: {
         type: Sequelize.STRING
     },
-    Confirmar_senha_Empresa: {
+    Confirmar_Senha: {
         type: Sequelize.STRING
     },
-    EndereçoEmpresa: {
+    Endereço: {
         type: Sequelize.STRING
     },
-    NumeroEmpresa: {
+    Numero: {
         type: Sequelize.INTEGER
     },
-    ComplementoEmpresa: {
+    Complemento: {
         type: Sequelize.STRING
     },
-    CEPEmpresa: {
+    CEP: {
         type: Sequelize.STRING
     },
-    BairroEmpresa: {
+    Bairro: {
         type: Sequelize.STRING
     },
-    CidadeEmpresa: {
+    Cidade: {
         type: Sequelize.STRING
     },
-    UFEmpresa: {
+    UF: {
         type: Sequelize.STRING
     }
 });
