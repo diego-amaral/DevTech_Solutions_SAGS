@@ -19,7 +19,7 @@ exports.create = (req, res) => {
     Email: req.body.Email,
     Confirmar_Email: req.body.Confirmar_Email,
     Telefone: req.body.Telefone,
-    senha: req.body.Senha,
+    Senha: req.body.Senha,
     Confirmar_Senha: req.body.Confirmar_Senha,
     Endereço: req.body.Endereço,
     Numero: req.body.Numero,
